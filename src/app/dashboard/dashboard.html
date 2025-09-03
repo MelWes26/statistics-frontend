@@ -1,0 +1,205 @@
+
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+       <span routerLink="/">Accueil</span>
+        </div>
+        <div class="nav-menu">
+          <div class="menu-heading">Menu</div>
+          <div class="nav-item active">
+            <i class="fas fa-chart-pie"></i>
+            <span routerLink="/dashboard">Tableau de bord</span>
+          </div>
+          <div class="nav-item">
+          <i class="fas fa-chart-line"></i>
+            <span>Suivi d'execution budgétaire</span>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header-actions">
+          <div class="notification">
+            <i class="fas fa-bell"></i>
+            <div class="badge">3</div>
+          </div>
+          <div class="notification">
+            <i class="fas fa-envelope"></i>
+            <div class="badge">5</div>
+          </div>
+          <div class="user-profile">
+            <div class="profile-img">JD</div>
+            <div class="user-info">
+              <div class="user-name">John Doe</div>
+              <div class="user-role">Administrator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="page-title">
+          <div class="title">Tableau de bord</div>
+          <div class="action-buttons">
+            <button class="btn btn-outline">
+              <i class="fas fa-download"></i>
+              Export
+            </button>
+            <button class="btn btn-primary">
+              <i class="fas fa-plus"></i>
+              Add New
+            </button>
+          </div>
+        </div>
+
+
+         <div class="card-title mb-4">
+            <h3><i class=""></i> DATE</h3>
+            <input type="date" class="form-control" id="datePicker" />
+          </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+          <div class="stat-card">
+            <div class="card-header">
+              <div>
+                <div class="card-value">100M</div>
+                <div class="card-label">Engagé AE</div>
+              </div>
+              <div class="card-icon purple">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="card-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>12.5% from last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-header">
+              <div>
+                <div class="card-value">99M</div>
+                <div class="card-label">Ordonnace</div>
+              </div>
+              <div class="card-icon blue">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+            <div class="card-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>8.2% from last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-header">
+              <div>
+                <div class="card-value">10M</div>
+                <div class="card-label">OP</div>
+              </div>
+              <div class="card-icon green">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+            <div class="card-change negative">
+              <i class="fas fa-arrow-down"></i>
+              <span>3.1% from last month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-header">
+              <div>
+                <div class="card-value">85%</div>
+                <div class="card-label">Taux Engagé</div>
+              </div>
+              <div class="card-icon orange">
+                <i class="fas fa-chart-line"></i>
+              </div>
+            </div>
+            <div class="card-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>4.6% from last month</span>
+            </div>
+          </div>
+
+
+          <div class="stat-card">
+            <div class="card-header">
+              <div>
+                <div class="card-value">85%</div>
+                <div class="card-label">Taux Ordonnancé</div>
+              </div>
+              <div class="card-icon orange">
+                <i class="fas fa-chart-line"></i>
+              </div>
+            </div>
+            <div class="card-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>4.6% from last month</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="table-card">
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Libellé court</th>
+                <th>Libellé long</th>
+                <th>Engage AE</th>
+                <th>Engage CP</th>
+                <th>Ordonnace</th>
+                <th>OP</th>
+                <th>Taux Engagé</th>
+                <th> Taux Ordonnacé</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#ORD-001</td>
+                <td>MF</td>
+                <td>Ministere des finance</td>
+                <td>$125.00</td>
+                <td>$125.00</td>
+                <td>$125.00</td>
+                <td>$125.00</td>
+                <td>$125.00</td>
+                <td>$125.00</td>
+             </tr>
+
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
