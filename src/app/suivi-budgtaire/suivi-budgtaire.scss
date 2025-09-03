@@ -1,0 +1,46 @@
+.logo {
+  max-width: 200px; /* Ajuste la taille de ton logo */
+  height: auto;
+
+}
+
+h2, h3 {
+  text-align: center;
+  margin: 5px 0;
+}
+
+p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 4px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.left {
+  text-align: left;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 10px;
+  text-align: right;
+}

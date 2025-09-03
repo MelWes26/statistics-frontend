@@ -65,16 +65,20 @@
 
 
          <div class="card-title mb-4">
-            <h3><i class=""></i> DATE</h3>
-            <input type="date" class="form-control" id="datePicker" />
+            <h3><i class=""></i> ANNEE</h3>
+
+            <select class="form-control" [(ngModel)]="selectedYear" (change)="fetchDashboardData()">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
           </div>
+
 
         <!-- Stats Cards -->
         <div class="stats-cards">
           <div class="stat-card">
             <div class="card-header">
               <div>
-                <div class="card-value">100M</div>
+                <div class="card-value">{{ metrics.totalEngageAE | shortNumber }}</div>
                 <div class="card-label">Engagé AE</div>
               </div>
               <div class="card-icon purple">
@@ -90,7 +94,7 @@
           <div class="stat-card">
             <div class="card-header">
               <div>
-                <div class="card-value">99M</div>
+                <div class="card-value">{{ metrics.totalOrdonnace | shortNumber}}</div>
                 <div class="card-label">Ordonnace</div>
               </div>
               <div class="card-icon blue">
@@ -106,7 +110,7 @@
           <div class="stat-card">
             <div class="card-header">
               <div>
-                <div class="card-value">10M</div>
+                <div class="card-value">{{ metrics.totalOP | shortNumber}}</div>
                 <div class="card-label">OP</div>
               </div>
               <div class="card-icon green">
@@ -122,7 +126,7 @@
           <div class="stat-card">
             <div class="card-header">
               <div>
-                <div class="card-value">85%</div>
+                <div class="card-value">{{ metrics.tauxEngage | number:'1.2-2' }}%</div>
                 <div class="card-label">Taux Engagé</div>
               </div>
               <div class="card-icon orange">
@@ -139,7 +143,7 @@
           <div class="stat-card">
             <div class="card-header">
               <div>
-                <div class="card-value">85%</div>
+                <div class="card-value">{{ metrics.tauxOrdonnance | number:'1.2-2' }}%</div>
                 <div class="card-label">Taux Ordonnancé</div>
               </div>
               <div class="card-icon orange">
@@ -159,43 +163,29 @@
           <table class="data-table">
             <thead>
               <tr>
-                <th>Code</th>
-                <th>Libellé court</th>
-                <th>Libellé long</th>
-                <th>Engage AE</th>
-                <th>Engage CP</th>
-                <th>Ordonnace</th>
-                <th>OP</th>
-                <th>Taux Engagé</th>
-                <th> Taux Ordonnacé</th>
+                <th  style="width: 30%;   height: 0px; padding : 0px">Code</th>
+                <th style="width: 30%;   height: 0px; padding : 0px"> Libellé court</th>
+                <th style="width: 200%;   height: 0px; padding-left : 10px">Libellé long</th>
+                <th style="width: 30%;   height: 0px; padding : 0px">Engage AE</th>
+                <th style="width: 30%;   height: 0px; padding : 0px">Engage CP</th>
+                <th style="width: 30%;   height: 0px; padding : 0px">Ordonnace</th>
+                <th style="width: 30%;   height: 0px; padding : 0px">OP</th>
+                <th style="width: 30%;   height: 0px; padding : 0px">Taux Engagé</th>
+                <th style="width: 30%;   height: 0px; padding : 0px"> Taux Ordonnacé</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>#ORD-001</td>
-                <td>MF</td>
-                <td>Ministere des finance</td>
-                <td>$125.00</td>
-                <td>$125.00</td>
-                <td>$125.00</td>
-                <td>$125.00</td>
-                <td>$125.00</td>
-                <td>$125.00</td>
-             </tr>
-
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-
-
+              <tr *ngFor="let item of tableData">
+            <td>{{ item.ministere?.codeMini }}</td>
+            <td>{{ item.ministere?.libCourtMini }}</td>
+            <td style="width: 250px  !important;">{{ item.ministere?.libLongMini }}</td>
+            <td>{{ item.mtEngAE  | formatNumber  }}</td>
+            <td>{{ item.mtEngCP  | formatNumber  }}</td>
+            <td>{{ item.mtMandatORD  | formatNumber }}</td>
+            <td>{{ item.mtOPnonRegul  | formatNumber }}</td>
+            <td>{{ ((item.mtEngAE / item.mtInitialAE) * 100) | number:'1.2-2' }}%</td>
+            <td>{{ ((item.mtMandatORD / item.mtInitialAE) * 100) | number:'1.2-2' }}%</td>
+          </tr>
             </tbody>
           </table>
         </div>
