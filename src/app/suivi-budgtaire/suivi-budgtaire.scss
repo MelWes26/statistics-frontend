@@ -7,7 +7,33 @@
 h2, h3 {
   text-align: center;
   margin: 5px 0;
+  font-weight: bold;
 }
+
+.centre-flex
+       {
+            display: flex;
+            flex-direction: column; /* Aligne les éléments verticalement */
+            align-items: center; /* Centre les éléments horizontalement */
+            justify-content: center; /* Centre les éléments verticalement (si le conteneur a une hauteur) */
+            text-align: center; /* Pour le texte */
+        }
+
+
+        .section {
+            margin-bottom: 20px;
+        }
+        /* Style pour le texte "Gestion" */
+        .gestion-style {
+            font-weight: bold; /* Met le texte en gras */
+            font-size: 1.5em; /* Augmente la taille de la police de 50% */
+        }
+
+ h1 {
+      font-weight: bold;  /* optionnel car h1 est déjà en gras */
+      font-size: 20px;    /* tu changes la taille comme tu veux */
+      text-align: center;
+    }
 
 p {
   text-align: center;
@@ -20,27 +46,39 @@ p {
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th { background: #f2f2f2; }
 
-th, td {
-  border: 1px solid #000;
-  padding: 4px;
-  text-align: center;
-}
+    .couleur{ background: #f2f2f2; }
 
-th {
-  background-color: #f0f0f0;
+    .titre {
+     text-align: center;
+     vertical-align: middle;
+     font-weight: bold;
+     font-size: 20px;
 }
+    /* Première colonne alignée à gauche */
+    td:first-child, th:first-child { text-align: left; }
 
-.left {
-  text-align: left;
-}
+    .sous-titre {
+      font-weight: bold;
+      text-align: left;
+      background-color: #f9f9f9;
+    }
+
+
 
 .footer {
   margin-top: 20px;
   font-size: 10px;
-  text-align: right;
+  text-align: left;
 }
